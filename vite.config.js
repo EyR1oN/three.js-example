@@ -1,14 +1,12 @@
-// vite.config.js
+import { defineConfig } from "vite";
 import basicSsl from "@vitejs/plugin-basic-ssl";
+import { resolve } from "path";
 
-export default {
+export default defineConfig({
   plugins: [
     basicSsl({
-      /** name of certification */
       name: "test",
-      /** custom trust domains */
       domains: ["*.custom.com"],
-      /** custom certification directory */
       certDir: "/Users/.../.devServer/cert",
     }),
   ],
@@ -23,4 +21,4 @@ export default {
       },
     },
   },
-};
+});
