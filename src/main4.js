@@ -127,9 +127,7 @@ function onSelect() {
   const clone = gltfModel.clone(true);
   clone.traverse((c) => {
     if (c.isMesh) {
-      if (state.material === "original") {
-        c.material = c.userData.original;
-      } else if (state.material === "gold") {
+      if (state.material === "gold") {
         c.material = new THREE.MeshStandardMaterial({
           color: 0xffd700,
           metalness: 1,
