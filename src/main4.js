@@ -1,4 +1,3 @@
-import "./style.css";
 import * as THREE from "three";
 import { ARButton } from "three/addons/webxr/ARButton.js";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";

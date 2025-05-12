@@ -1,4 +1,3 @@
-import "./style.css";
 import * as THREE from "three";
 import { ARButton } from "three/addons/webxr/ARButton.js";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
