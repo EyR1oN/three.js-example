@@ -1,0 +1,114 @@
+body {
+  margin: 0;
+  background: #000;
+  overflow: hidden;
+  font-family: ‘Segoe UI’, Tahoma, Geneva, Verdana, sans-serif;
+}
+
+canvas {
+  display: block;
+}
+
+#controls {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background: rgba(30, 30, 30, 0.8);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  z-index: 10;
+}
+
+#controls button,
+#controls select,
+#controls input[type="“range”"],
+#controls input[type="“color”"] {
+  background: #444;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1rem;
+  font-size: 0.9rem;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+#controls button:hover,
+#controls select:hover,
+#controls input[type="“range”"]::-webkit-slider-thumb:hover {
+  background: #555;
+}
+
+#controls button:active {
+  transform: scale(0.98);
+}
+
+#controls select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding-right: 2.5rem;
+  background-image: url(“data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D’10’%20height%3D’7’%20viewBox%3D’0%200%2010%207’%20xmlns%3D’http://www.w3.org/2000/svg’%3E%3Cpath%20d%3D’M0%200l5%207l5-7z’%20fill%3D’%23fff’/%3E%3C/svg%3E”);
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+}
+
+#controls input[type="“range”"] {
+  -webkit-appearance: none;
+  width: 100%;
+  padding: 0;
+}
+
+#controls input[type="“range”"]::-webkit-slider-runnable-track {
+  height: 0.4rem;
+  background: #555;
+  border-radius: 0.2rem;
+}
+
+#controls input[type="“range”"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 1rem;
+  height: 1rem;
+  background: #08f;
+  border-radius: 50%;
+  margin-top: -0.3rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+#controls input[type="“range”"]:focus {
+  outline: none;
+}
+
+#controls input[type="“range”"]::-moz-range-track {
+  height: 0.4rem;
+  background: #555;
+  border-radius: 0.2rem;
+}
+
+#controls input[type="“range”"]::-moz-range-thumb {
+  width: 1rem;
+  height: 1rem;
+  background: #08f;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+#controls input[type="“color”"] {
+  padding: 0;
+  width: 2rem;
+  height: 2rem;
+}
+
+#controls label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #ddd;
+  font-size: 0.9rem;
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AR Lab5 — Task 2</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div id="controls">
+      <button id="toggleRotationBtn">Disable Rotation</button>
+      <label>
+        Axis:
+        <select id="axisSelect">
+          <option value="x">X</option>
+          <option value="y" selected>Y</option>
+          <option value="z">Z</option>
+        </select>
+      </label>
+      <label>
+        Material:
+        <select id="materialSelect">
+          <option value="original" selected>Original</option>
+          <option value="alternative">Alternative</option>
+        </select>
+      </label>
+      <button id="sceneLightBtn">Scene Light: ON</button>
+      <button id="modelLightBtn">Model Light: OFF</button>
+      <label>
+        Light Type:
+        <select id="modelLightTypeSelect">
+          <option value="point" selected>Point</option>
+          <option value="spot">Spot</option>
+          <option value="directional">Directional</option>
+        </select>
+      </label>
+      <label>
+        Intensity:
+        <input
+          type="range"
+          id="modelLightIntensity"
+          min="0"
+          max="10"
+          step="0.1"
+          value="1"
+        />
+      </label>
+      <label>
+        Color:
+        <input type="color" id="modelLightColor" value="#ffffff" />
+      </label>
+    </div>
+    <script type="module" src="/src/main2.js"></script>
+  </body>
+</html>
